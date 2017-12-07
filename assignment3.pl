@@ -12,5 +12,5 @@ addElement(X,[H|T],[H|Z]) :- addElement(X,T,Z).
 hasLength([],0).
 hasLength([_|X],L) :- hasLength(X,N),L is N+1 .
 
-remove([Head|Tail], Head, Tail).
+remove([E|Tail], E, Tail).
 remove([Head|Tail], E, [Head|NewTail]):- remove(Tail, E, NewTail).
